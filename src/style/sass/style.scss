@@ -35,9 +35,11 @@ body {
 
 
 }
-.landing{
-       margin-top: 2.5rem !important;
+
+.landing {
+    margin-top: 2.5rem !important;
 }
+
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -77,6 +79,7 @@ body {
         margin-top: -15px;
     }
 }
+
 .log-landing {
     h1 {
         font-size: 24px;
@@ -139,7 +142,7 @@ body {
 
 //................................... dashboard .....................................
 .body-content {
-    background-color:$bg-color;
+    background-color: $bg-color;
     min-height: 85vh;
     margin-left: 17%;
     padding-top: 5rem;
@@ -222,9 +225,10 @@ footer {
     textarea {
         width: 100%;
         border: none;
-        background-color:$bg-color;
+        background-color: $bg-color;
     }
-    textarea:focus{
+
+    textarea:focus {
         outline: none;
     }
 }
@@ -246,7 +250,7 @@ footer {
     .form-container {
         min-height: 80vh;
         margin: 3.2rem 0;
-        padding: 0 3rem;
+        padding: 0.5rem 3rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -311,6 +315,55 @@ footer {
     }
 }
 
+.forget-form {
+    height: 73vh;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+    // background-color:red;
+    .image {
+        width: 50%;
+
+        img {
+            width: 80%;
+        }
+
+    }
+
+    .form-element {
+        width: 50%;
+        padding: 3rem;
+
+        .title {
+            margin-bottom: 1rem;
+            color: $primary-color;
+            font-size: large;
+            font-weight: bold;
+        }
+
+
+        .form-group {
+            width: 100%;
+            margin-top: 0.1rem;
+
+            input:focus {
+                outline: none;
+            }
+
+            input[type="submit"] {
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+}
+
 .post {
     display: flex;
 
@@ -322,7 +375,8 @@ footer {
             margin-left: 1rem;
         }
     }
-    button{
+
+    button {
         border: none;
         background-color: $primary-color;
         color: #fff;
@@ -332,24 +386,29 @@ footer {
     }
 
 }
-.blog{
+
+.blog {
     margin-bottom: 2rem;
     margin-left: 9rem;
-    .header{
+
+    .header {
         display: flex;
-        .names{
+
+        .names {
             display: flex;
             flex-direction: column;
             padding-top: 1px;
             padding-left: 10px;
-            .small{
+
+            .small {
                 font-size: 12px;
                 color: gray;
             }
         }
     }
-    .footer{
-        span{
+
+    .footer {
+        span {
             margin-right: 1rem;
             font-size: 16px;
         }
@@ -445,6 +504,27 @@ footer {
 
         .right {
             margin-left: 0 !important;
+        }
+    }
+
+    .forget-form {
+        height: 60vh;
+        // margin-top: 1rem;
+        // margin-bottom: 4rem;
+        padding: 0 0;
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+        // box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+        // background-color:red;
+        .image {
+            display: none;
+        }
+        .form-element{
+            width: 100%;
+            padding: 1rem;
         }
     }
 }
