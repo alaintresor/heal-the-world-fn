@@ -5,7 +5,12 @@ import Dashboard from '../pages/dashboard';
 import Post from '../pages/post'
 import Login from '../pages/login'
 import Register from '../pages/signup'
+
 import Chat from '../pages/chat'
+
+
+import Forget from '../pages/forget'
+import Reset from '../pages/reset-password';
 
 
 const routes = () => {
@@ -17,6 +22,8 @@ const routes = () => {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/chat" element={<Chat />} />
             <Route exact path="/register" element={<Register />} />
+            <Route exact path="/forget-password" element={<Forget />} />
+            <Route exact path="/reset-password" element={<Reset />} />
         </Routes>
     );
 }
