@@ -8,6 +8,8 @@ import Register from '../pages/signup'
 import Forget from '../pages/forget'
 import Reset from '../pages/reset-password';
 import Profile from '../pages/profile'
+import Chat from '../pages/chat'
+
 
 const routes = () => {
     return (
@@ -17,6 +19,7 @@ const routes = () => {
             <Route exact path="/post" element={<Post />} />
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/login" element={<Login />} />
+            <Route exact path="/chat" element={<Chat />} />
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/forget-password" element={<Forget />} />
             <Route exact path="/reset-password" element={<Reset />} />
