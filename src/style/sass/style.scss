@@ -35,7 +35,9 @@ body {
 
 
 }
-
+.landing{
+       margin-top: 2.5rem !important;
+}
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -64,6 +66,18 @@ body {
 }
 
 .log {
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary-color;
+        margin-top: 1rem;
+    }
+
+    p {
+        margin-top: -15px;
+    }
+}
+.log-landing {
     h1 {
         font-size: 24px;
         font-weight: bold;

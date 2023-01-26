@@ -8,11 +8,11 @@ const HotelSearchCard = () => {
 
                 <div class="container">
                     <div class="index-menu">
-                        <div class="log ">
+                        <div class="log-landing ">
                             <h1>HEAL THE WORLD</h1>
                             <p>You are not alone</p>
                         </div>
-                        <div class="nav ">
+                        <div class="nav landing ">
                             <nav>
                                 <span class="login">
                                     <Link to="/login"> Login</Link>
