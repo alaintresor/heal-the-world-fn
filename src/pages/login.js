@@ -20,7 +20,7 @@ const data = JSON.stringify({
 
 var config = {
   method: 'post',
-  url: 'http://localhost:3000/api/v1/user/login',
+  url: 'https://mental-health-be.up.railway.app/api/v1/user/login',
   headers: { 
     'Content-Type': 'application/json'
   },
@@ -34,7 +34,7 @@ console.log(res)
     if(res.success){
         setIsLoading(false)
   toast.success("Successfully");
-//  navigate('/login')
+ navigate('/dashboard')
     }else{
         setIsLoading(false)
         toast.error(`${res.message}`);

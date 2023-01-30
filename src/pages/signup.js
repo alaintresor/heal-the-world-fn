@@ -35,7 +35,7 @@ const data = JSON.stringify({
 
 var config = {
   method: 'post',
-  url: 'http://localhost:3000/api/v1/user/register',
+  url: 'https://mental-health-be.up.railway.app/api/v1/user/register',
   headers: { 
     'Content-Type': 'application/json'
   },
