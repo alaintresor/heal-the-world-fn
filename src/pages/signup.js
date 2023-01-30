@@ -1,9 +1,84 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate, redirect } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const SignUp = () => {
+    const [isLoading, setIsLoading] = useState(false);
+    const navigate = useNavigate();
+    const [fname,setFname]=useState('')
+    const [lname,setLname]=useState('')
+    const [email,setEmail]=useState('')
+    const [gender,setGender]=useState('')
+    const [dob,setDOB]=useState('')
+    const [tel,setTel]=useState('')
+    const [password,setPassword]=useState('')
+    const [cpassword,setCpassword]=useState('')
+    const handleSubmit=(e)=>{
+        console.log(gender)
+    e.preventDefault()
+    setIsLoading(true)
+const data = JSON.stringify({
+    "firstname":fname,
+    "lastname":lname,
+    "username":"default",
+    "gender":gender,
+    "age":dob,
+    "email":email,
+    "address":"default",
+    "role":"user",
+    "phone":tel,
+    "password":password,
+    "confirm_password":cpassword
+});
+
+var config = {
+  method: 'post',
+  url: 'http://localhost:3000/api/v1/user/register',
+  headers: { 
+    'Content-Type': 'application/json'
+  },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+    const res =response.data;
+
+    if(res.success){
+        setIsLoading(false)
+  toast.success("Successfully");
+ navigate('/login')
+    }else{
+        setIsLoading(false)
+
+        toast.error(`${res.message}`);
+
+    }
+
+})
+.catch(function (error) {
+    setIsLoading(false)
+
+  console.log(error.response);
+});
+
+
+    }
     return (
         <>
+         {/* This is the modal that is hidden by default */}
+      <div style={{ display: isLoading ? 'flex' : 'none' }} className='modal'>
+        <div className='modal-content'>
+          <div className='loader'></div>
+          <div className='modal-text'>Loading...</div>
+        </div>
+      </div>
             <div className="main">
                 <div className="container">
+                <ToastContainer />
+                    <form onSubmit={(e)=>handleSubmit(e)}>
                     <div className="row login-form">
                         <div className="col-lg-8 form-container">
                             <p>
@@ -12,26 +87,27 @@ const SignUp = () => {
                                 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
                                 and scrambled it to make a type specimen book.
                             </p>
+                            
                             <div className="flex">
                                 <div className="form-group left">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="text" className="form-control" id="exampleFormControlInput1"
+                                    <label for="fname"></label>
+                                    <input type="text" className="form-control" name="fname" onChange={(e)=>setFname(e.target.value)} id="fname"
                                         placeholder="Enter Firstname" />
                                 </div>
                                 <div className="form-group right">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="text" className="form-control" id="exampleFormControlInput1"
+                                    <label for="lname"></label>
+                                    <input type="text" className="form-control" onChange={(e)=>setLname(e.target.value)} id="lname"
                                         placeholder="Lastname" />
                                 </div>
                             </div>
                             <div className="flex">
                                 <div className="form-group left">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="E-mail" />
+                                    <label for="email"></label>
+                                    <input type="email" className="form-control" id="email" onChange={(e)=>setEmail(e.target.value)} placeholder="E-mail" />
                                 </div>
                                 <div className="form-group right">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <select className="form-control" id="exampleFormControlInput1">
+                                    <label for=""></label>
+                                    <select className="form-control" onChange={(e)=>setGender(e.target.value)} id="">
                                         <option value="G">select gender</option>
                                         <option value="M">Male</option>
                                         <option value="F">Female</option>
@@ -40,25 +116,25 @@ const SignUp = () => {
                             </div>
                             <div className="flex">
                                 <div className="form-group left">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="date" className="form-control" id="exampleFormControlInput1"
+                                    <label for=""></label>
+                                    <input type="date" onChange={(e)=>setDOB(e.target.value)} className="form-control" id=""
                                         placeholder="Date of birth" />
                                 </div>
                                 <div className="form-group right">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="password" className="form-control" id="exampleFormControlInput1"
+                                    <label for=""></label>
+                                    <input type="tel" onChange={(e)=>setTel(e.target.value)} className="form-control" id=""
                                         placeholder="Phone number" />
                                 </div>
                             </div>
                             <div className="flex">
                                 <div className="form-group left">
-                                    <label for="exampleFormControlInput1"> </label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1"
+                                    <label for=""> </label>
+                                    <input type="password" onChange={(e)=>setPassword(e.target.value)} className="form-control" id=""
                                         placeholder="Password" />
                                 </div>
                                 <div className="form-group right">
-                                    <label for="exampleFormControlInput1"></label>
-                                    <input type="password" className="form-control" id="exampleFormControlInput1"
+                                    <label for=""></label>
+                                    <input type="password" onChange={(e)=>setCpassword(e.target.value)} className="form-control" id=""
                                         placeholder="Re-enter Password" />
                                 </div>
                             </div>
@@ -82,6 +158,7 @@ const SignUp = () => {
                             </p>
                         </div>
                     </div>
+                    </form>
                 </div>
                 <footer className="container">
                     <hr />
