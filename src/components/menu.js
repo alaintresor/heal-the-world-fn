@@ -1,4 +1,9 @@
 import img1 from "../assets/images/13.png"
+import {
+    CogIcon, BellIcon, ChatAltIcon,GlobeAltIcon
+
+
+} from '@heroicons/react/outline';
 
 export default function Menu() {
     return (
@@ -12,13 +17,14 @@ export default function Menu() {
                     <nav>
 
                         <span>
-                            <i class="fa-solid fa-globe" style={{ fontSize: "25px", color: "gray" }}></i>
+                            
+                            <GlobeAltIcon className="icon" />
                         </span>
                         <span>
-                            <i class="fa-regular fa-envelope" style={{ fontSize: "25px", color: "gray" }}></i>
+                            <ChatAltIcon className="icon" />
                         </span>
                         <span>
-                            <i class="fa-regular fa-bell" style={{ fontSize: "25px", color: "gray" }}></i>
+                            <BellIcon className="icon" />
                         </span>
                         <span>
                             <img src={img1} alt="" width="50" />
@@ -26,7 +32,7 @@ export default function Menu() {
 
                         </span>
                         <span>
-                            <i class="fa-solid fa-gear" style={{ fontSize: "25px", color: "gray" }}></i>
+                            <CogIcon className="icon" />
                         </span>
                     </nav>
                 </div>

@@ -48,8 +48,13 @@ body {
     margin-top: 1rem;
 
     span {
-        margin-left: 1.5rem;
+        margin-left: 1rem;
         cursor: pointer;
+
+        .icon {
+            width: 2rem;
+            color: #606060;
+        }
     }
 
     .mobile-menu {
@@ -141,6 +146,7 @@ body {
 }
 
 //................................... dashboard .....................................
+
 .body-content {
     background-color: $bg-color;
     min-height: 85vh;
@@ -583,7 +589,8 @@ footer {
 
             }
         }
-        .chatChat{
+
+        .chatChat {
             padding: 6px;
             border-radius: 7px;
             display: flex;
@@ -593,7 +600,7 @@ footer {
             margin-left: 10px;
             height: 70vh;
             background-color: #FFFFFF;
-            width: 40%; 
+            width: 40%;
         }
     }
 }
@@ -680,7 +687,7 @@ footer {
     }
 }
 
-.profileChat{
+.profileChat {
     padding: 6px;
     border-radius: 7px;
     display: flex;
@@ -690,25 +697,27 @@ footer {
     margin-left: 10px;
     height: 70vh;
     background-color: #FFFFFF;
-    width: 30%; 
-    .partOne{
+    width: 30%;
+
+    .partOne {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+
         .img {
             // width: 15%;
             display: flex;
-        
+
             img {
                 width: 50px;
                 height: 50px;
-        
+
                 // position: absolute;
-        
-        
+
+
             }
-        
+
             .online {
                 width: 15px;
                 height: 15px;
@@ -719,10 +728,10 @@ footer {
                 margin-top: 30px;
                 z-index: 1;
             }
-        
+
             .onlineIcon {
-        
-        
+
+
                 border-radius: 50px;
                 margin-left: -4px;
                 margin-top: -4px;
@@ -731,29 +740,34 @@ footer {
                 background-color: #21c634;
             }
         }
-        .line{
+
+        .line {
             border-bottom: 0.5px solid gray;
             width: 50%;
             margin-left: 60%;
         }
     }
-    .partTwo{
+
+    .partTwo {
         width: 100%;
         display: flex;
-      flex-direction: column;
-      align-content: flex-start;
-      padding: 10px;
-      .identification{
-        padding: 5px;
-        display: flex;
-        div:first-child{
-            padding: 10px;
-        }
-        .id{
+        flex-direction: column;
+        align-content: flex-start;
+        padding: 10px;
+
+        .identification {
+            padding: 5px;
             display: flex;
-            flex-direction: column;
+
+            div:first-child {
+                padding: 10px;
+            }
+
+            .id {
+                display: flex;
+                flex-direction: column;
+            }
         }
-      }
     }
 }
 
@@ -762,43 +776,44 @@ footer {
     height: 60vh;
     padding: 20px;
     border-radius: 10px;
-  }
-  
-  .chat-header {
+}
+
+.chat-header {
     text-align: center;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
-  }
-  
-  .chat-messages {
+}
+
+.chat-messages {
     height: 90%;
     overflow-y: scroll;
-  }
-  
-  .message-container {
+}
+
+.message-container {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
     background-color: #D9D9D9;
-  }
-  
-  .chat-input-container {
+}
+
+.chat-input-container {
     border-top: 1px solid #ccc;
     padding-top: 10px;
     display: flex;
     align-items: center;
+
     input[type="text"] {
         border-top: 1px solid #ccc;
         flex: 1;
         padding: 10px;
         border-radius: 10px;
         border: 1px solid #3BCAB3;
-      }
-  }
-  
- 
-  
-  button {
+    }
+}
+
+
+
+button {
     padding: 10px;
     margin-left: 10px;
     background-color: #3BCAB3;
@@ -806,9 +821,9 @@ footer {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-  }
+}
 
-  .img {
+.img {
     width: 15%;
     display: flex;
 
@@ -841,48 +856,55 @@ footer {
         width: 12px;
         height: 12px;
         background-color: #21c634;
-    }}
+    }
+}
 
-    .forget-form {
-        height: 60vh;
-        // margin-top: 1rem;
-        // margin-bottom: 4rem;
-        padding: 0 0;
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: center;
-        // align-items: center;
-        // box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+.forget-form {
+    height: 60vh;
+    // margin-top: 1rem;
+    // margin-bottom: 4rem;
+    padding: 0 0;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    // box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 
-        // background-color:red;
-        .image {
-            display: none;
-        }
-        .form-element{
-            width: 100%;
-            padding: 1rem;
-        }
+    // background-color:red;
+    .image {
+        display: none;
+    }
 
-    
+    .form-element {
+        width: 100%;
+        padding: 1rem;
     }
 
 
-    /* Style the modal */
+}
+
+
+/* Style the modal */
 .modal {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Semi-transparent black background */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  /* Modal Content */
-  .modal-content {
+}
+
+/* Modal Content */
+.modal-content {
     margin: auto;
     width: 30%;
     padding: 20px;
@@ -892,15 +914,15 @@ footer {
     align-items: center;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fefefe;
-  }
-  
-  .modal-text {
+}
+
+.modal-text {
     margin-left: 14px;
     font-size: 24px;
-  }
-  
-  /* Create the circle loader with pure CSS */
-  .loader {
+}
+
+/* Create the circle loader with pure CSS */
+.loader {
     width: 50px;
     height: 50px;
     border: 8px solid #ddd;
@@ -909,22 +931,24 @@ footer {
     border-radius: 50%;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
-  }
-  
-  @-webkit-keyframes spin {
+}
+
+@-webkit-keyframes spin {
     0% {
-      -webkit-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
+
     100% {
-      -webkit-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
