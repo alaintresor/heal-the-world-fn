@@ -24,34 +24,6 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <script>
-        window.onload = function() {
-    var image=document.getElementById("wrapperHeader");
-    var img_array=['%PUBLIC_URL%/2.png','%PUBLIC_URL%/3.png','%PUBLIC_URL%/1.png'];
-    var index=0;
-    var interval = 3000;
-    function slide() {
-      console.log(image.style.background)
-      image.style.background = `url('${img_array[index++%img_array.length]}')`;
-    }
-    setInterval(slide, interval);
-  }
-        // console.log(Checkout)
-  function errorCallback(error) {
-    console.log(JSON.stringify(error));
-    // Handles callback when a there's an error during a transaction while on the checkout page.
-  }
-  function cancelCallback() {
-    console.log("Payment cancelled");
-    // Handles callback when a client cancels a transaction while on the checkout page.
-  }
-  function completeCallback(resultIndicator,sessionVersion) {
-            console.log(sessionVersion);
-            console.log(resultIndicator);
-            // compaire the resultIndicator to successIndicator value, should be similar for a successful transaction.
-            // you can redirect your client to a success page at this point
-  }
-    </script>
     <title>Heal The World</title>
   </head>
   <body>

@@ -67,6 +67,46 @@ body {
     }
 }
 
+.mobile-nav {
+    display: none;
+    position: absolute;
+    left: -100%;
+    top: 0px;
+    z-index: 1;
+    background-color: #058c81;
+    height: 100%;
+    width: 70vw;
+    transition: all .10s !important;
+
+
+    h1 {
+        color: white;
+        font-size: 20px;
+        margin-top: 2rem;
+    }
+
+    p {
+        color: black;
+        margin-top: -1rem;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 3rem;
+
+        a {
+            margin-top: 2rem;
+            padding: 0.6rem 0;
+            background-color: white;
+            color: $primary-color;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    }
+}
+
 .log {
     h1 {
         font-size: 24px;
@@ -415,6 +455,22 @@ footer {
     }
 }
 
+// .......profile.......
+.profile-box {
+    margin-top: 2rem;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.profile {
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -522,7 +578,8 @@ footer {
         .image {
             display: none;
         }
-        .form-element{
+
+        .form-element {
             width: 100%;
             padding: 1rem;
         }
