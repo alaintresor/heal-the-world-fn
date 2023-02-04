@@ -5,70 +5,90 @@ import Sidebar from "../components/Sidebar";
 const Profile = () => {
     return (
         <>
-            <div class="header">
-                <div class="container-fluid">
+            <div className="header">
+                <div className="container-fluid">
                     <Menu />
-                    <section class="contents">
-                        <div class="row-container">
+                    <section className="contents">
+                        <div className="row-container">
                             <Sidebar />
-                            <div class="col-lg-10 body-content">
+                            <div className="col-lg-10 body-content">
 
 
-                                <div class="container">
+                                <div className="container">
                                     <div className="profile">
                                         <br />
                                         <p className="flex"><b> Kabano Festo</b><span className="small"> 42 posts</span></p>
 
                                     </div>
                                     <div className="profile-box">
-                                        <center>
-                                            <h3>
-                                                Recent Posts (23)
-                                            </h3>
-                                        </center>
-                                        <hr />
-                                        <div class="blog">
-                                            <div class="header">
-                                                <img src={img1} alt="" width="50" />
-                                                <div class="names">
-                                                    <span> <b>Kabano Festo</b> <span class="small"> Rwanda</span></span>
-                                                    <span class="small">@kbb .2 hours ago</span>
+                                        <div className="profile-header container">
+                                            <div className="header-flex">
+                                                <div className="content">
+                                                    <img src={img1} alt="" width="80" />
+                                                    <span><b>KABANO Festo</b></span>
+                                                    <span className="email">festo@gmail.com</span>
+                                                    <p className="rows">
+                                                        <p> <span className="title"><i class="fa-regular fa-calendar-days"></i> Date Of Birth:</span> 02 March 2002</p>
+                                                        <p> <span className="title"><i class="fa-sharp fa-solid fa-location-dot"></i> Location:</span> RWANDA</p>
+                                                        <p> <span className="title">Gender:</span> Male</p>
+                                                    </p>
+                                                </div>
+                                                <div >
+                                                    <button className="edit-btn">Edit Profile</button>
                                                 </div>
                                             </div>
-                                            <div class="content">
-                                                <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac potenti nunc nibh a
-                                                    faucibus rhoncus..
-                                                </p>
-                                                <img src={img2} alt="" />
-                                            </div>
-                                            <div class="footer">
-                                                <span> <i class="fa-regular fa-comment primary-color"></i> 45</span>
-                                                <span><i class="fa-regular fa-heart"></i> 3k</span>
-                                                <span><i class="fa-regular fa-eye"></i> 12k</span>
-                                                <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                            <div className="titles">
+                                                <span className="active">Posts</span>
+                                                <span>Replies</span>
+                                                <span>Media</span>
+                                                <span>Likes</span>
                                             </div>
                                         </div>
-                                        <div class="blog">
-                                            <div class="header">
+
+                                        <div className="blog">
+                                            <div className="header">
                                                 <img src={img1} alt="" width="50" />
-                                                <div class="names">
-                                                    <span> <b>Kabano Festo</b> <span class="small"> Rwanda</span></span>
-                                                    <span class="small">@kbb .2 hours ago</span>
+                                                <div className="names">
+                                                    <span> <b>Kabano Festo</b> <span className="small"> Rwanda</span></span>
+                                                    <span className="small">@kbb .2 hours ago</span>
                                                 </div>
                                             </div>
-                                            <div class="content">
+                                            <div className="content">
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac potenti nunc nibh a
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac potenti nunc
+                                                    nibh a
                                                     faucibus rhoncus..
                                                 </p>
                                                 <img src={img2} alt="" />
                                             </div>
-                                            <div class="footer">
-                                                <span> <i class="fa-regular fa-comment primary-color"></i> 45</span>
-                                                <span><i class="fa-regular fa-heart"></i> 3k</span>
-                                                <span><i class="fa-regular fa-eye"></i> 12k</span>
-                                                <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                            <div className="footer">
+                                                <span> <i className="fa-regular fa-comment primary-color"></i> 45</span>
+                                                <span><i className="fa-regular fa-heart"></i> 3k</span>
+                                                <span><i className="fa-regular fa-eye"></i> 12k</span>
+                                                <span><i className="fa-solid fa-arrow-up-from-bracket"></i></span>
+                                            </div>
+                                        </div>
+                                        <div className="blog">
+                                            <div className="header">
+                                                <img src={img1} alt="" width="50" />
+                                                <div className="names">
+                                                    <span> <b>Kabano Festo</b> <span className="small"> Rwanda</span></span>
+                                                    <span className="small">@kbb .2 hours ago</span>
+                                                </div>
+                                            </div>
+                                            <div className="content">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac potenti nunc
+                                                    nibh a
+                                                    faucibus rhoncus..
+                                                </p>
+                                                <img src={img2} alt="" />
+                                            </div>
+                                            <div className="footer">
+                                                <span> <i className="fa-regular fa-comment primary-color"></i> 45</span>
+                                                <span><i className="fa-regular fa-heart"></i> 3k</span>
+                                                <span><i className="fa-regular fa-eye"></i> 12k</span>
+                                                <span><i className="fa-solid fa-arrow-up-from-bracket"></i></span>
                                             </div>
                                         </div>
                                     </div>
@@ -77,7 +97,7 @@ const Profile = () => {
                         </div>
                     </section>
                 </div>
-            </div >
+            </div>
 
         </>
     )
