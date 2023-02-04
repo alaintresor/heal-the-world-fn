@@ -72,46 +72,6 @@ body {
     }
 }
 
-.mobile-nav {
-    display: none;
-    position: absolute;
-    left: -100%;
-    top: 0px;
-    z-index: 1;
-    background-color: #058c81;
-    height: 100%;
-    width: 70vw;
-    transition: all .10s !important;
-
-
-    h1 {
-        color: white;
-        font-size: 20px;
-        margin-top: 2rem;
-    }
-
-    p {
-        color: black;
-        margin-top: -1rem;
-    }
-
-    .menu-item {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin-top: 3rem;
-
-        a {
-            margin-top: 2rem;
-            padding: 0.6rem 0;
-            background-color: white;
-            color: $primary-color;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-    }
-}
-
 .log {
     h1 {
         font-size: 24px;
@@ -461,88 +421,6 @@ footer {
     }
 }
 
-// .......profile.......
-.profile-box {
-    margin-top: 2rem;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-
-    .profile-header {
-
-        .header-flex {
-            display: flex;
-            justify-content: space-between;
-
-            .content {
-                display: flex;
-                flex-direction: column;
-                margin-top: -2rem;
-                margin-left: 2rem;
-
-                img {
-                    margin-left: 0.5rem;
-                }
-
-                .email {
-                    color: $primary-color;
-                    font-size: 12px;
-                    margin-top: -0.3rem;
-                }
-
-                .rows {
-                    display: flex;
-
-                    p {
-                        margin-right: 1rem;
-
-                        .title {
-                            color: gray;
-                            font-weight: bold;
-                        }
-                    }
-
-                }
-            }
-
-            .edit-btn {
-                padding: 0.3rem 2.5rem;
-                border: none;
-                margin-top: 2rem;
-                margin-right: 2rem;
-                background-color: $primary-color;
-                color: white;
-                border-radius: 5px;
-            }
-
-        }
-        .titles{
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid grey;
-            border-bottom: 1px solid grey;
-            padding: 0.5rem 2rem;
-            margin-top: -1rem;
-            margin-bottom: 1rem;
-            color: gray;
-            font-weight: bold;
-            .active{
-                color: black;
-                text-decoration: underline 3px $primary-color;
-            }
-        }
-    }
-}
-
-.profile {
-    .flex {
-        display: flex;
-        flex-direction: column;
-    }
-
-
-}
-
 
 @media screen and (max-width: 768px) {
 
@@ -635,26 +513,6 @@ footer {
         }
     }
 
-    .forget-form {
-        height: 60vh;
-        // margin-top: 1rem;
-        // margin-bottom: 4rem;
-        padding: 0 0;
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: center;
-        // align-items: center;
-        // box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-
-        // background-color:red;
-        .image {
-            display: none;
-        }
-
-        .form-element {
-            width: 100%;
-            padding: 1rem;
-        }
 }
 
 .chatHeader {
@@ -1026,30 +884,6 @@ button {
 }
 
 
-
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-  }
-}
-  
-  
 /* Style the modal */
 .modal {
     position: fixed;
@@ -1080,34 +914,6 @@ button {
     align-items: center;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fefefe;
-    }
-
-
-    /* Style the modal */
-.modal {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    margin: auto;
-    width: 30%;
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #fefefe;
 }
 
 .modal-text {
@@ -1125,23 +931,24 @@ button {
     border-radius: 50%;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
-  }
-  
-  .modal-text {
-    margin-left: 14px;
-    font-size: 24px;
-  }
-  
-  /* Create the circle loader with pure CSS */
-  .loader {
-    width: 50px;
-    height: 50px;
-    border: 8px solid #ddd;
-    border-top: 8px solid #2196f3;
-    border-bottom: 8px solid #2196f3;
-    border-radius: 50%;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
 }
-    
 
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
