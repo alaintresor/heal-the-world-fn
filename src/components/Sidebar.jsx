@@ -21,7 +21,12 @@ export default function Sidebar() {
       </div>
 
       <div class="nav-item">
-        <Link to="/profile"> <span><i class="fa-solid fa-user"></i></span> Profile</Link>
+  
+        <Link to="/chat"><span><i class="fa-solid fa-message"></i></span> Chat</Link>
+      </div>
+
+      <div class="nav-item">
+      <Link to="/profile"> <span><i class="fa-solid fa-user"></i></span> Profile</Link>
       </div>
       <div class="nav-item">
         <Link to="#"><span><i class="fa-solid fa-circle-info"></i></span> Help</Link>
