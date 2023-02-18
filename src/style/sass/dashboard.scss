@@ -1,0 +1,65 @@
+//................................... dashboard .....................................
+
+.body-content {
+    background-color: $bg-color;
+    min-height: 85vh;
+    margin-left: 17%;
+    padding-top: 5rem;
+}
+
+.profile-image {
+    margin-top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: $primary-color;
+    border-radius: 50%;
+}
+
+.sidebar {
+    // text-align: center;
+    margin-top: 8rem;
+    padding-left: 1.5rem;
+    position: fixed;
+    width: 18%;
+
+
+    .nav-item {
+        font-size: 20px;
+        padding-bottom: 1.5rem;
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        a:hover {
+            color: $primary-color;
+        }
+
+
+
+    }
+}
+
+footer {
+    // padding: 2rem;
+    margin-top: -3rem;
+    color: $primary-color;
+    font-weight: bold;
+
+    .left {
+        display: flex;
+        justify-content: space-between !important;
+
+    }
+
+    .icon {
+        font-size: 12px;
+        margin-top: -3rem;
+    }
+}
