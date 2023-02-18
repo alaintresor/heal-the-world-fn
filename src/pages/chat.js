@@ -16,23 +16,14 @@ const chat = () => {
                                 <div class="container">
                                     <div className='chatHeader'>
                                         <h2 className='h2Chat1'>CHAT</h2>
-                                        <h2 className='h2Chat2'>chat</h2>
                                     </div>
 
                                     <div className='containerChat'>
                                         <div className='containerChatTwo'>
 
                                             <div className='recentChat'>
-                                                <button class="btn-borded">
-                                                    Recent Chat
-                                                </button>
+
                                                 <div className='chat'>
-                                                    <ChatUser />
-                                                    <ChatUser />
-                                                    <ChatUser />
-                                                    <ChatUser />
-                                                    <ChatUser />
-                                                    <ChatUser />
                                                     <ChatUser />
                                                     <ChatUser />
                                                     <ChatUser />
@@ -42,9 +33,7 @@ const chat = () => {
                                             </div>
                                             <div className='chatChat'>
                                                 <div className="chat-container">
-                                                    <div className="chat-header">
-                                                        <h3>Chat</h3>
-                                                    </div>
+                                                    <p>John Doe</p>
                                                     <div className="chat-messages">
                                                         <div className="message-container">
                                                             <p className="message-text">Hello, how can I help you?</p>
@@ -91,9 +80,9 @@ const chat = () => {
                                                     <div className='identification'>
                                                         <div>
 
-                                                  
-                                                    <span><i class="fa-solid fa-id-card"></i></span>
-                                                    </div>
+
+                                                            <span><i class="fa-solid fa-id-card"></i></span>
+                                                        </div>
                                                         <div className='id'>
                                                             <span>Id</span>
                                                             <span>12345678945678</span>
@@ -102,9 +91,9 @@ const chat = () => {
                                                     <div className='identification'>
                                                         <div>
 
-                                                  
-                                                    <span><i class="fa-solid fa-envelope"></i></span>
-                                                    </div>
+
+                                                            <span><i class="fa-solid fa-envelope"></i></span>
+                                                        </div>
                                                         <div className='id'>
                                                             <span>Email</span>
                                                             <span>teerenzo.co@gmail.com</span>
@@ -113,9 +102,9 @@ const chat = () => {
                                                     <div className='identification'>
                                                         <div>
 
-                                                  
-                                                    <span><i class="fa-solid fa-map-marker"></i></span>
-                                                    </div>
+
+                                                            <span><i class="fa-solid fa-map-marker"></i></span>
+                                                        </div>
                                                         <div className='id'>
                                                             <span>Address</span>
                                                             <span>Kigali,Rwanda</span>

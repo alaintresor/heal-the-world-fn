@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import img1 from "../assets/images/Padlock.png"
 import forget from "../assets/images/forget.svg"
+import Footer from "../components/Footer";
 const Login = () => {
     return (
         <>
@@ -35,27 +36,7 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-
-                    <footer >
-                        <hr />
-                        <div class="row">
-                            <div class="col-lg-6 right">
-                                <span>English (United State) <span class="icon"> <i class="fa fa-angle-down"
-                                    aria-hidden="true"></i></span></span>
-                            </div>
-                            <div class="col-lg-6 left">
-                                <span>
-                                    Help
-                                </span>
-                                <span>
-                                    Privacy
-                                </span>
-                                <span>
-                                    Terms
-                                </span>
-                            </div>
-                        </div>
-                    </footer>
+                    <Footer />
                 </div>
             </div >
         </>
