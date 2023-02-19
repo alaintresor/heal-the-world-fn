@@ -5,7 +5,7 @@ import Menu from "../components/menu";
 import ProfileModal from "../components/profileModal";
 import Sidebar from "../components/Sidebar";
 const Profile = () => {
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
