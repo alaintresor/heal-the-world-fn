@@ -1,9 +1,10 @@
 import img1 from "../assets/images/13.png"
 import {
-    CogIcon, BellIcon, ChatAltIcon,GlobeAltIcon
+    CogIcon, BellIcon, ChatAltIcon, GlobeAltIcon
 
 
 } from '@heroicons/react/outline';
+import { Link } from "react-router-dom";
 
 export default function Menu() {
     return (
@@ -17,7 +18,7 @@ export default function Menu() {
                     <nav>
 
                         <span>
-                            
+
                             <GlobeAltIcon className="icon" />
                         </span>
                         <span>
@@ -27,9 +28,9 @@ export default function Menu() {
                             <BellIcon className="icon" />
                         </span>
                         <span>
-                            <img src={img1} alt="" width="50" />
-
-
+                            <Link to="/profile">
+                                <img src={img1} alt="" width="50" />
+                            </Link>
                         </span>
                         <span>
                             <CogIcon className="icon" />
