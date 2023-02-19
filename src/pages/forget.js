@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import img1 from "../assets/images/Padlock.png"
 import forget from "../assets/images/forget.svg"
 import Footer from "../components/Footer";
 const Login = () => {
@@ -15,7 +14,7 @@ const Login = () => {
                     </div>
                     <div class="forget-form">
                         <div className="image">
-                            <img src={forget} />
+                            <img src={forget} alt=""/>
                         </div>
                         <div className="form-element">
                             <div class="title">
