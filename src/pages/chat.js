@@ -67,7 +67,7 @@ const chat = () => {
                                             <div className='profileChat'>
                                                 <div className='partOne'>
                                                     <div className='img'>
-                                                        <img src={img1} />
+                                                        <img src={img1} alt=""/>
                                                         <div className='online'><div className='onlineIcon'></div></div>
                                                     </div>
                                                     <h5>Rosa</h5>

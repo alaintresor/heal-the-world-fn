@@ -1,15 +1,23 @@
+import { useState } from "react";
 import img1 from "../assets/images/13.png"
 import img2 from "../assets/images/kbb.png"
 import Menu from "../components/menu";
+import ProfileModal from "../components/profileModal";
 import Sidebar from "../components/Sidebar";
 const Profile = () => {
+    const [show, setShow] = useState(true)
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <>
+
             <div className="header">
                 <div className="container-fluid">
                     <Menu />
                     <section className="contents">
                         <div className="row-container">
+                            <ProfileModal show={show} handleClose={handleClose} />
                             <Sidebar />
                             <div className="col-lg-10 body-content">
 
@@ -34,7 +42,7 @@ const Profile = () => {
                                                     </p>
                                                 </div>
                                                 <div >
-                                                    <button className="edit-btn">Edit Profile</button>
+                                                    <button className="edit-btn" onClick={() => handleShow()}>Edit Profile</button>
                                                 </div>
                                             </div>
                                             <div className="titles">
