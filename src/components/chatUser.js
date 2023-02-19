@@ -5,7 +5,7 @@ const chatUser = () => {
         <>
             <div className='chatUser'>
                 <div className='img'>
-                    <img src={img1} />
+                    <img src={img1} alt=""/>
                     <div className='online'><div className='onlineIcon'></div></div>
                 </div>
                 <div className='textChat'>

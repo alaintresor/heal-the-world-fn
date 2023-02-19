@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import img2 from "../assets/images/back.svg"
 import Menu from "../components/menu";
 import Sidebar from "../components/Sidebar";
