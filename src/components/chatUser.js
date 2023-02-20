@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from "../assets/images/13.png"
+import img1 from "../assets/images/profile.png"
 const chatUser = () => {
     return (
         <>

@@ -1,4 +1,4 @@
-import img1 from "../assets/images/13.png"
+import img1 from "../assets/images/profile.png"
 import {
     CogIcon, BellIcon, ChatAltIcon, GlobeAltIcon
 
@@ -32,9 +32,9 @@ export default function Menu() {
                                 <img src={img1} alt="" width="50" />
                             </Link>
                         </span>
-                        <span>
+                        {/* <span>
                             <CogIcon className="icon" />
-                        </span>
+                        </span> */}
                     </nav>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import img1 from "../assets/images/13.png"
+import img1 from "../assets/images/profile.png"
 import img2 from "../assets/images/kbb.png"
 import Menu from "../components/menu";
 import ProfileModal from "../components/profileModal";
