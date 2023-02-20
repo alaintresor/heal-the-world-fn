@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Menu from '../components/menu'
 import Sidebar from '../components/Sidebar'
-import img1 from "../assets/images/13.png"
+import img1 from "../assets/images/profile.png"
 import ChatUser from '../components/chatUser'
-const chat = () => {
+
+const Chat = () => {
+    const [show, setShow] = useState(false)
+
+    const showProfile = () => {
+        if(show){
+        document.querySelector('.chatChat').style.width = '70%'
+        document.querySelector('.profileChat').style.display = 'flex'
+        }else{
+            document.querySelector('.chatChat').style.width = '100%'
+            document.querySelector('.profileChat').style.display = 'none'
+        }
+        setShow(!show)
+    }
     return (
         <>
             <div className='header'>
@@ -14,10 +27,10 @@ const chat = () => {
                             <Sidebar />
                             <div class="col-lg-10 body-content">
                                 <div class="container">
-                                    <div className='chatHeader'>
+                                    {/* <div className='chatHeader'>
                                         <h2 className='h2Chat1'>CHAT</h2>
-                                    </div>
-
+                                    </div> */}
+                                    <br />
                                     <div className='containerChat'>
                                         <div className='containerChatTwo'>
 
@@ -29,33 +42,49 @@ const chat = () => {
                                                     <ChatUser />
                                                     <ChatUser />
                                                     <ChatUser />
+                                                    <ChatUser />
+                                                    <ChatUser />
                                                 </div>
                                             </div>
                                             <div className='chatChat'>
                                                 <div className="chat-container">
-                                                    <p>John Doe</p>
+                                                    <div className="chat-header">
+                                                        <div className="chat-header-img">
+                                                            <img src={img1} alt="" />
+                                                            <div className="chat-header-name">
+                                                                <h3>John Doe</h3>
+                                                                <span>Active now</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="chat-header-icons">
+                                                            <span onClick={() => showProfile()}>
+                                                                <i class="fa-solid fa-circle-info"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                     <div className="chat-messages">
-                                                        <div className="message-container">
-                                                            <p className="message-text">Hello, how can I help you?</p>
-                                                        </div>
-                                                        <div className="message-container">
-                                                            <p className="message-text">Hello, how can I help you?</p>
-                                                        </div>
-                                                        <div className="message-container">
-                                                            <p className="message-text">Hello, how can I help you?</p>
-                                                        </div>
-                                                        <div className="message-container">
-                                                            <p className="message-text">Hello, how can I help you?</p>
-                                                        </div>
-                                                        <div className="message-container">
-                                                            <p className="message-text">Hello, how can I help you?</p>
-                                                        </div>
-                                                        <div className="message-container">
-                                                            <p className="message-text">Hello, how can I help you?</p>
-                                                        </div>
-                                                        <div className="message-container">
-                                                            <p className="message-text">I need some information about your products.</p>
-                                                        </div>
+
+                                                        <p className="message-text">Hello, how can I help you?</p>
+
+
+                                                        <p className="message-reply">Hello, how can I help you?</p>
+
+
+                                                        <p className="message-text">Hello, how can I help you?</p>
+
+
+                                                        <p className="message-reply">Hello, how can I help you?</p>
+
+
+                                                        <p className="message-text">Hello, how can I help you?</p>
+
+
+                                                        <p className="message-reply">Hello, how can I help you?</p>
+
+
+                                                        <p className="message-text">I need some information about your products.</p>
+
                                                     </div>
                                                     <div className="chat-input-container">
                                                         <input type="text" placeholder="Type your message here..." />
@@ -67,7 +96,7 @@ const chat = () => {
                                             <div className='profileChat'>
                                                 <div className='partOne'>
                                                     <div className='img'>
-                                                        <img src={img1} alt=""/>
+                                                        <img src={img1} alt="" />
                                                         <div className='online'><div className='onlineIcon'></div></div>
                                                     </div>
                                                     <h5>Rosa</h5>
@@ -131,4 +160,4 @@ const chat = () => {
     )
 }
 
-export default chat
+export default Chat
