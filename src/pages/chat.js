@@ -5,13 +5,13 @@ import img1 from "../assets/images/profile.png"
 import ChatUser from '../components/chatUser'
 
 const Chat = () => {
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(true)
 
     const showProfile = () => {
-        if(show){
-        document.querySelector('.chatChat').style.width = '70%'
-        document.querySelector('.profileChat').style.display = 'flex'
-        }else{
+        if (show) {
+            document.querySelector('.chatChat').style.width = '70%'
+            document.querySelector('.profileChat').style.display = 'flex'
+        } else {
             document.querySelector('.chatChat').style.width = '100%'
             document.querySelector('.profileChat').style.display = 'none'
         }
@@ -99,7 +99,7 @@ const Chat = () => {
                                                         <img src={img1} alt="" />
                                                         <div className='online'><div className='onlineIcon'></div></div>
                                                     </div>
-                                                    <h5>Rosa</h5>
+                                                    <h5>John Doe</h5>
                                                     <h6>Therapist</h6>
                                                     <h6>+250780640237</h6>
                                                     <div className='line'></div>
