@@ -5,13 +5,13 @@ import img1 from "../assets/images/profile.png"
 import ChatUser from '../components/chatUser'
 
 const Chat = () => {
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(true)
 
     const showProfile = () => {
-        if(show){
-        document.querySelector('.chatChat').style.width = '70%'
-        document.querySelector('.profileChat').style.display = 'flex'
-        }else{
+        if (show) {
+            document.querySelector('.chatChat').style.width = '70%'
+            document.querySelector('.profileChat').style.display = 'flex'
+        } else {
             document.querySelector('.chatChat').style.width = '100%'
             document.querySelector('.profileChat').style.display = 'none'
         }
