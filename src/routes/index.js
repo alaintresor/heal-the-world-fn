@@ -5,6 +5,7 @@ import Dashboard from '../pages/dashboard';
 import Post from '../pages/post'
 import Login from '../pages/login'
 import Register from '../pages/signup'
+import NotFound from '../pages/notFound'
 
 import Chat from '../pages/chat'
 
@@ -16,7 +17,7 @@ import Profile from '../pages/profile'
 
 const routes = () => {
     return (
-        <Routes>
+        <Routes>          
             <Route exact path="/" element={<Home />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
             <Route exact path="/post" element={<Post />} />
@@ -26,6 +27,8 @@ const routes = () => {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/forget-password" element={<Forget />} />
             <Route exact path="/reset-password" element={<Reset />} />
+
+            <Route path="*" element={<NotFound/>} />            
         </Routes>
     );
 }
