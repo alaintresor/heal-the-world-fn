@@ -33,9 +33,15 @@ const Login = () => {
                 const res = response.data;
                 console.log(res)
                 if (res.success) {
+                    localStorage.setItem("token",res.token)
+                    localStorage.setItem("id",res.user.id)
+
                     setIsLoading(false)
                     toast.success("Successfully");
-                    navigate('/dashboard')
+                    setTimeout(() => {
+                        navigate('/dashboard')
+                    }, 2000);
+               
                 } else {
                     setIsLoading(false)
                     toast.error(`${res.message}`);
