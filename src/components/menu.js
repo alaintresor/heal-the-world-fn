@@ -1,12 +1,14 @@
 import img1 from "../assets/images/profile.png"
 import {
-    CogIcon, BellIcon, ChatAltIcon, GlobeAltIcon
-
-
+    BellIcon, ChatAltIcon, GlobeAltIcon
 } from '@heroicons/react/outline';
+
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Menu() {
+
+    const { user } = useSelector(state => state.user)
     return (
         <>
             <div class="menu row">
@@ -29,7 +31,7 @@ export default function Menu() {
                         </span>
                         <span>
                             <Link to="/profile">
-                                <img src={img1} alt="" width="50" />
+                                <img src={user.profileImage !== '' ? user.profileImage : img1} alt="" width="50" />
                             </Link>
                         </span>
                         {/* <span>

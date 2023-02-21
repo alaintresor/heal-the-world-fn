@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import img1 from "../assets/images/profile.png"
 import img2 from "../assets/images/kbb.png"
 import Menu from "../components/menu";
@@ -9,6 +10,8 @@ const Profile = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const { user } = useSelector(state => state.user)
+
     return (
         <>
 
@@ -17,7 +20,7 @@ const Profile = () => {
                     <Menu />
                     <section className="contents">
                         <div className="row-container">
-                            <ProfileModal show={show} handleClose={handleClose} />
+                            <ProfileModal show={show} handleClose={handleClose} user={user} />
                             <Sidebar />
                             <div className="col-lg-10 body-content">
 
@@ -25,20 +28,20 @@ const Profile = () => {
                                 <div className="container">
                                     <div className="profile">
                                         <br />
-                                        <p className="flex"><b> Kabano Festo</b><span className="small"> 42 posts</span></p>
+                                        <p className="flex"><b> {user.username} </b><span className="small"> 42 posts</span></p>
 
                                     </div>
                                     <div className="profile-box">
                                         <div className="profile-header container">
                                             <div className="header-flex">
                                                 <div className="content">
-                                                    <img src={img1} alt="" width="80" />
-                                                    <span><b>KABANO Festo</b></span>
-                                                    <span className="email">festo@gmail.com</span>
+                                                    <img src={user.profileImage !== '' ? user.profileImage : img1} alt="" width="80" />
+                                                    <span><b>{user.firstname} {user.lastname}</b></span>
+                                                    <span className="email">{user.email}</span>
                                                     <p className="rows">
-                                                        <p> <span className="title"><i class="fa-regular fa-calendar-days"></i> Date Of Birth:</span> 02 March 2002</p>
-                                                        <p> <span className="title"><i class="fa-sharp fa-solid fa-location-dot"></i> Location:</span> RWANDA</p>
-                                                        <p> <span className="title">Gender:</span> Male</p>
+                                                        <p> <span className="title"><i class="fa-regular fa-calendar-days"></i> Date Of Birth:</span> {user.dob}</p>
+                                                        <p> <span className="title"><i class="fa-sharp fa-solid fa-location-dot"></i> Location:</span> {user.address}</p>
+                                                        <p> <span className="title">Gender:</span> {user.gender}</p>
                                                     </p>
                                                 </div>
                                                 <div >

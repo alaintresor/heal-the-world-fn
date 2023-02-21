@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
-import img1 from "../assets/images/Padlock.png"
-import axios from "axios";
+import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
+
+import axios from "axios";
+import img1 from "../assets/images/Padlock.png"
 import Footer from "../components/Footer";
+import { logginUser } from "../redux/slices/Auth/login";
+
 const Login = () => {
-    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
+    const dispatch = useDispatch()
+
+
+    const [isLoading, setIsLoading] = useState(false);
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -31,17 +39,16 @@ const Login = () => {
         axios(config)
             .then(function (response) {
                 const res = response.data;
-                console.log(res)
                 if (res.success) {
-                    localStorage.setItem("token",res.token)
-                    localStorage.setItem("id",res.user.id)
-
+                    localStorage.setItem("token", res.token)
+                    localStorage.setItem("user", JSON.stringify(res.user))
+                    dispatch(logginUser(res.user))
                     setIsLoading(false)
                     toast.success("Successfully");
                     setTimeout(() => {
                         navigate('/dashboard')
                     }, 2000);
-               
+
                 } else {
                     setIsLoading(false)
                     toast.error(`${res.message}`);
@@ -91,12 +98,12 @@ const Login = () => {
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1"></label>
                                     <input type="email" class="form-control" onChange={(e) => setUsername(e.target.value)} id="exampleFormControlInput1"
-                                        placeholder="Enter Email" required/>
+                                        placeholder="Enter Email" required />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1"></label>
                                     <input type="password" class="form-control" onChange={(e) => setPassword(e.target.value)} id="exampleFormControlInput2"
-                                        placeholder="Enter Password" required/>
+                                        placeholder="Enter Password" required />
                                 </div>
                                 <br />
                                 <div class="form-group">
