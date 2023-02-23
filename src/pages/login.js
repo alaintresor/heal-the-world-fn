@@ -33,15 +33,15 @@ const Login = () => {
                 const res = response.data;
                 console.log(res)
                 if (res.success) {
-                    localStorage.setItem("token",res.token)
-                    localStorage.setItem("id",res.user.id)
+                    localStorage.setItem("token", res.token)
+                    localStorage.setItem("id", res.user.id)
 
                     setIsLoading(false)
                     toast.success("Successfully");
                     setTimeout(() => {
                         navigate('/dashboard')
                     }, 2000);
-               
+
                 } else {
                     setIsLoading(false)
                     toast.error(`${res.message}`);
@@ -71,11 +71,13 @@ const Login = () => {
                         <ToastContainer />
                         <div class="row login-form">
                             <div class="col-lg-6 text-container">
-                                <h1>Being healthly</h1>
+                                <h1>Be healthly</h1>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    of type and scrambled it to make a type specimen book.
+                                    We hope that you are going to heal others,
+                                    And as well as that you are going to heal.
+                                    We want you to know that mental health
+                                    matters and you are responsible to make it
+                                    better.
                                 </p>
                             </div>
                             <div class="col-lg-6 form-container">
@@ -91,12 +93,12 @@ const Login = () => {
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1"></label>
                                     <input type="email" class="form-control" onChange={(e) => setUsername(e.target.value)} id="exampleFormControlInput1"
-                                        placeholder="Enter Email" required/>
+                                        placeholder="Enter Email" required />
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1"></label>
                                     <input type="password" class="form-control" onChange={(e) => setPassword(e.target.value)} id="exampleFormControlInput2"
-                                        placeholder="Enter Password" required/>
+                                        placeholder="Enter Password" required />
                                 </div>
                                 <br />
                                 <div class="form-group">

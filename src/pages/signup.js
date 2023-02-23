@@ -84,9 +84,11 @@ const SignUp = () => {
                             <div className="col-lg-8 form-container">
                                 <p>
                                     <h1 className="primary-color">Hello !</h1>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                                    and scrambled it to make a type specimen book.
+                                    Heal The World is so excited to see you back.
+                                    We are thanking full for the decision that
+                                    You have taken so far to join us in this journey
+                                    And together we can go far.
+
                                 </p>
 
                                 <div className="flex">
@@ -98,13 +100,13 @@ const SignUp = () => {
                                     <div className="form-group right">
                                         <label for="lname"></label>
                                         <input type="text" className="form-control" onChange={(e) => setLname(e.target.value)} id="lname"
-                                            placeholder="Lastname" required/>
+                                            placeholder="Lastname" required />
                                     </div>
                                 </div>
                                 <div className="flex">
                                     <div className="form-group left">
                                         <label for="email"></label>
-                                        <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} placeholder="E-mail" required/>
+                                        <input type="email" className="form-control" id="email" onChange={(e) => setEmail(e.target.value)} placeholder="E-mail" required />
                                     </div>
                                     <div className="form-group right">
                                         <label for=""></label>
@@ -119,24 +121,24 @@ const SignUp = () => {
                                     <div className="form-group left">
                                         <label for=""></label>
                                         <input type="date" onChange={(e) => setDOB(e.target.value)} className="form-control" id=""
-                                            placeholder="Date of birth" required/>
+                                            placeholder="Date of birth" required />
                                     </div>
                                     <div className="form-group right">
                                         <label for=""></label>
                                         <input type="tel" onChange={(e) => setTel(e.target.value)} className="form-control" id=""
-                                            placeholder="Phone number" required/>
+                                            placeholder="Phone number" required />
                                     </div>
                                 </div>
                                 <div className="flex">
                                     <div className="form-group left">
                                         <label for=""> </label>
                                         <input type="password" onChange={(e) => setPassword(e.target.value)} className="form-control" id=""
-                                            placeholder="Password" required/>
+                                            placeholder="Password" required />
                                     </div>
                                     <div className="form-group right">
                                         <label for=""></label>
                                         <input type="password" onChange={(e) => setCpassword(e.target.value)} className="form-control" id=""
-                                            placeholder="Re-enter Password" required/>
+                                            placeholder="Re-enter Password" required />
                                     </div>
                                 </div>
                                 <br />
@@ -153,9 +155,11 @@ const SignUp = () => {
                             <div className="col-lg-4 text-container">
                                 <h1>Glad to see you!</h1>
                                 <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                                    of type and scrambled it to make a type specimen book.
+                                    Heal The World is so excited to see you back.
+                                    We are thanking full for the decision that
+                                    You have taken so far to join us in this journey
+                                    And together we can go far.
+
                                 </p>
                             </div>
                         </div>

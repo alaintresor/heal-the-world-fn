@@ -17,9 +17,12 @@ const Dashboard = () => {
                                     <div class="box">
                                         <h3>Hi, Welcome Back !</h3>
                                         <div class="content">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac potenti nunc nibh a
-                                            faucibus rhoncus. Ipsum gravida ut mattis in euismod enim id netus porttitor.
-                                            Scelerisque quisque augue congue ipsum feugiat. Dui lorem sit nullam
+                                            We hope that you are going to heal others,
+                                            And as well as that you are going to heal.
+                                            We want you to know that mental health
+                                            matters and you are responsible to make it
+                                            better.
+
                                         </div>
                                     </div>
 
