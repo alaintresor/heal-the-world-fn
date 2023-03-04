@@ -44,7 +44,7 @@ export default function ProfileModal({ show, handleClose, user }) {
 
     var config = {
       method: 'put',
-      url: 'https://mental-health-be.up.railway.app/api/v1/user/profile',
+      url: `${process.env.REACT_APP_BACKEND_URL}/v1/user/profile`,
       headers: {
         'Authorization': `Bearer ${token}`
       },
