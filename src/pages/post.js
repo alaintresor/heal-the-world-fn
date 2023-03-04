@@ -21,15 +21,15 @@ const Post = () => {
         data.append('image', image[0]);
         data.append('content', content);
 
-var config = {
-  method: 'post',
-maxBodyLength: Infinity,
-  url: `${process.env.REACT_APP_BACKEND_URL}/v1/post/add`,
-  headers: { 
-    'Authorization': `Bearer ${token}`, 
-  },
-  data : data
-};
+        var config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: `${process.env.REACT_APP_BACKEND_URL}/v1/post/add`,
+            headers: {
+                'Authorization': `Bearer ${token}`,
+            },
+            data: data
+        };
 
         axios(config)
             .then(function (response) {

@@ -42,7 +42,7 @@ const Login = () => {
                 if (res.success) {
                     localStorage.setItem("token", res.token)
                     localStorage.setItem("id", res.user.id)
-
+                    dispatch(logginUser(res.user))
                     setIsLoading(false)
                     toast.success("Successfully");
                     setTimeout(() => {
