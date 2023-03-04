@@ -21,7 +21,7 @@ const Login = () => {
 
         var config = {
             method: 'post',
-            url: 'https://mental-health-be.up.railway.app/api/v1/user/login',
+            url: `${process.env.REACT_APP_BACKEND_URL}/v1/user/login`,
             headers: {
                 'Content-Type': 'application/json'
             },
