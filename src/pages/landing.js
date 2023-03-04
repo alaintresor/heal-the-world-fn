@@ -3,6 +3,8 @@ import bk from "../assets/images/img.png"
 import Footer from "../components/Footer";
 const HotelSearchCard = () => {
 
+
+
     let isShowing = false
     const showMenu = () => {
         const menu = document.getElementById('mobile')

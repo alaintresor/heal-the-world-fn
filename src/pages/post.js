@@ -26,7 +26,7 @@ data.append('content', content);
 var config = {
   method: 'post',
 maxBodyLength: Infinity,
-  url: 'https://mental-health-be.up.railway.app/api/v1/post/add',
+  url: `${process.env.REACT_APP_BACKEND_URL}/v1/post/add`,
   headers: { 
     'Authorization': `Bearer ${token}`, 
   },

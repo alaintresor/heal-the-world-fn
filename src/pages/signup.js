@@ -36,7 +36,7 @@ const SignUp = () => {
 
         var config = {
             method: 'post',
-            url: 'https://mental-health-be.up.railway.app/api/v1/user/register',
+            url: `${process.env.REACT_APP_BACKEND_URL}/v1/user/register`,
             headers: {
                 'Content-Type': 'application/json'
             },
